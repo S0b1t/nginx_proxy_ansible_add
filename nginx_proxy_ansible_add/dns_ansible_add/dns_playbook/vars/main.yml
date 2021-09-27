@@ -1,0 +1,11 @@
+---
+# vars file for dns_playbook
+sub_domain: "test-pps"
+domain: "pps.uz"
+ansible_fqdn: "ns.pps.uz"
+directory_forward: "pps.uz"
+directory_ptr: "74.54.84"
+old_date: '20210924'
+new_date: '20210926'
+new_sub_domain: "test-pps.pps.uz"
+hosts: "ubuntu"
