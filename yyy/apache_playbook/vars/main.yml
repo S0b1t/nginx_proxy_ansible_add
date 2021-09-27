@@ -1,8 +1,0 @@
----
-# vars file for apache_playbook
-directory_for_ubuntu: "/etc/apache2/sites-available"
-directory_for_centos: "/etc/httpd/sites-available"
-conf_file_name: "example.uz"
-server_name: "example.uz"
-proxy_pass: "192.168.0.38"
-hosts: "ubuntu"
