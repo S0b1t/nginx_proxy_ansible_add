@@ -1,0 +1,17 @@
+---
+# vars file for nginx_playbook
+#don't forget to configure nginx.conf file if you are using proxy balancing server
+# upstream backends {
+        # server node01.srv.world:80 weight=2;
+        # server node02.srv.world:80;
+        # }
+
+directory: "/etc/nginx/sites-available"
+conf_file_name: "domain"
+server_name: "example.uz"
+server_address: "192.168.0.199"
+http_port: "80"
+https_port: "443"
+ssl_certificate_path: "/etc/letsencrypt/live/www.srv.world/fullchain.pem"
+ssl_certificate_key_path: "/etc/letsencrypt/live/www.srv.world/privkey.pem"
+hosts: "ubuntu"

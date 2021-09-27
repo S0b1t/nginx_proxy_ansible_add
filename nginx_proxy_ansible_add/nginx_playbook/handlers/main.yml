@@ -1,0 +1,6 @@
+---
+# handlers file for nginx_playbook
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
