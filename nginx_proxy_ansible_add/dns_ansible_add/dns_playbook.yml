@@ -1,6 +1,0 @@
----
-- hosts: "{{ hosts }}"
-  become: yes
-
-  roles:
-  - dns_playbook

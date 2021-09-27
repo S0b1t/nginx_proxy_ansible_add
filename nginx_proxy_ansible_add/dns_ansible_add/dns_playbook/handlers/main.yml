@@ -1,7 +1,0 @@
----
-# handlers file for dns_playbook
-- name: reload rndc forward
-  shell: "rndc reload ssv.uz"
-  
-- name: reload rndc ptr
-  shell: "rndc reload 74.54.84.in-addr.arpa"
