@@ -1,0 +1,13 @@
+---
+# handlers file for apache_playbook
+- name: restart apache
+  service:
+    name: apache2
+    state: restarted
+  when: ansible_os_family == "Debian"
+
+- name: restart httpd
+  service:
+    name: httpd
+    state: restarted
+  when: ansible_os_family == "RedHat"
