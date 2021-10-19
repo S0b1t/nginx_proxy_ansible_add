@@ -5,53 +5,7 @@
   blockinfile:
     path: "{{ directory }}/{{ conf_file_name }}.conf"
     block: |
-
-      server {
-              listen      {{ http_port }} default_server;
-      #        listen      [::]:80 default_server;
-      #        listen      {{ https_port }} ssl http2 default_server;
-      #        listen      [::]:443 ssl http2 default_server;
-              server_name {{ server_name }};
-
-      #        ssl_certificate "{{ ssl_certificate_path }}";
-      #        ssl_certificate_key "{{ ssl_certificate_key_path }}";
-      #        ssl_session_cache shared:SSL:1m;
-      #        ssl_session_timeout  10m;
-
-              proxy_redirect      off;
-              proxy_set_header    X-Real-IP $remote_addr;
-              proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
-              proxy_set_header    Host $http_host;
-
-              location / {
-                      proxy_pass http://{{ server_address }}/;
-              }
-      }
-      #proxy balancing
-      #server {
-      #        listen      80 default_server;
-      #        listen      [::]:80 default_server;
-      # specify your local network for [set_real_ip_from]
-      #        set_real_ip_from   10.0.0.0/24;
-      #        real_ip_header     X-Forwarded-For;
-      #        listen      443 ssl http2 default_server;
-      #        listen      [::]:443 ssl http2 default_server;
-      #        server_name www.srv.world;
-            
-      #        ssl_certificate "/etc/letsencrypt/live/www.srv.world/fullchain.pem";
-      #        ssl_certificate_key "/etc/letsencrypt/live/www.srv.world/privkey.pem";
-      #        ssl_session_cache shared:SSL:1m;
-      #        ssl_session_timeout  10m;
-
-      #        proxy_redirect      off;
-      #        proxy_set_header    X-Real-IP $remote_addr;
-      #        proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
-      #        proxy_set_header    Host $http_host;
-
-      #        location / {
-      #                proxy_pass http://backends;
-      #        }
-      #}
+    
 
 
 
